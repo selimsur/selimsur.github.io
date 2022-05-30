@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HSS</title>
+
+		<!-- meta -->
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="css/pace.css">
+	    <link rel="stylesheet" href="css/custom.css">
+		<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+
+	    <!-- js -->
+	    <script src="js/jquery-2.1.3.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/pace.min.js"></script>
+	    <script src="js/modernizr.custom.js"></script>
+	</head>
+
+	<body id="single">
+		<div class="container">	
+			<header id="site-header">
+				<div class="row">
+					<div class="col-md-6 col-sm-5 col-xs-8">
+						<div class="logo">
+							<h1><a href="index.html"><b>H</b>üseyin </a><b>S</b>elim <b>S</b>ürmelihindi</h1>
+						</div>
+					</div><!-- col-md-4 -->
+					<div class="col-md-6 col-sm-7 col-xs-4">
+						<nav class="main-nav" role="navigation">
+							<div class="navbar-header">
+  								<button type="button" id="trigger-overlay" class="navbar-toggle">
+    								<span class="ion-navicon"></span>
+  								</button>
+							</div>
+
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  								<ul class="nav navbar-nav navbar-right">
+    								<li class="cl-effect-11"><a href="index.html" data-hover="Anasayfa">Anasayfa</a></li>
+    								<li class="cl-effect-11"><a href="full-width.html" data-hover="Projeler">Projeler</a></li>
+    								<li class="cl-effect-11"><a href="about.html" data-hover="Hakkımda">Hakkımda</a></li>
+    								<!-- <li class="cl-effect-11"><a href="contact.html" data-hover="İletişim">İletişim</a></li> -->
+  								</ul>
+							</div><!-- /.navbar-collapse -->
+						</nav>
+						<!-- <div id="header-search-box">
+							<a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+							<div id="search-form" class="search-form">
+								<form role="search" method="get" id="searchform" action="#">
+									<input type="search" placeholder="Search" required>
+									<button type="submit"><span class="ion-ios-search-strong"></span></button>
+								</form>				
+							</div>
+						</div> -->
+					</div><!-- col-md-8 -->
+				</div>
+			</header>
+		</div>
+
+		<div class="content-body">
+			<div class="container">
+				<div class="row">
+					<main class="col-md-16">
+						<article class="post post-1">
+							<header class="entry-header">
+								<h1 class="entry-title">XSS (Cross-Site Scripting) Nedir ?</h1>
+								<div class="entry-meta">
+									<span class="post-category"><a href="#">Web Güvenliği</a></span>
+			
+									<span class="post-date"><a href="#"><time class="entry-date" datetime="2012-11-09T23:15:57+00:00">Mayıs, 2022</time></a></span>
+			
+									<!-- <span class="post-author"><a href="#">Albert Einstein</a></span> -->
+			
+									<!-- <span class="comments-link"><a href="#">4 Comments</a></span> -->
+								</div>
+							</header>
+							<div class="entry-content clearfix">
+								<figure class="img-responsive-center">
+									<img class="img-responsive" src="img/xss.png" alt="SQLI Types">
+								</figure>
+								<p>XSS ‘in tanımı Siteler Arası Betik Çalıştırma(Cross-Site Scripting), genellikle web uygulamalarında bulunan bir tür bilgisayar güvenlik açıklığıdır.  Injection ailesine ait bir zafiyet türüdür. Zafiyet uygulama tarafından kullanıcı girdisine izin verilmesi sonucu ortaya çıkmaktadır. Siteler arası betik çalıştırma açıklığı, saldırganlar tarafından aynı kök politikası gibi bazı erişim kontrollerini atlatmak için kullanılabilmektedir. </p>
+								<p>	Web sayfaları üzerinde gerçekleştirilen siteler arası betik çalıştırma saldırıları, 2007 itibarıyla Symantec’in raporladığı tüm güvenlik açıklıklarının yaklaşık olarak %84’ünü oluşturmaktadır. Zafiyet içeren sitenin işlediği verinin hassasiyetine ve site sahibi tarafından uygulanan güvenlik tedbirlerine bağlım olarak, etkisi ufak bir aksamadan önemli bir güvenlik riskine kadar değişebilmektedir.</p>
+								<h2>XSS Türleri</h2>
+								<figure class="img-responsive-center">
+									<img class="img-responsive" src="img/xssTypes.png" alt="SQLI Types">
+								</figure>
+								<p>3 Çeşit XSS türü vardır. Reflected XSS, Stored XSS ve Dom XSS </p>
+								<h3>1.Reflected XSS</h3>
+								<p>Kullanıcının girilmesi beklenen parametre yerine Javascript kodu girerek bunu ekrana yansıtması ile tespit edilebilen XSS çeşitidir.</p>
+								<h3>2.Stored XSS</h3>
+								<p>İsminden de anlaşılacağı üzere kör atış yapılan bir SQL injection saldırısıdır. Blind sql injection açığı bulunan bir sistemde veri tabanındaki tablo isimleri, kolonlar direkt olarak görünmez. Bu saldırıyı gerçekleştirmenin en bilindik yolu sistemdeki kolon isimlerini harf harf deneyerek bulmaktır.</p>
+								<h3>3.Dom XSS </h3>
+								<p>Dom ( Document OBJECT Model) XSS Dom lardan kaynaklanan XSS’dir. Genelde # işaretinden sonra payload denenmesi ve sayfa yenilendiğinde alert alındığında DOM XSS var denilen XSS açıklığıdır.</p>
+								<h2>XSS Nasıl Önlenir ?</h2>
+								<figure class="img-responsive-center">
+									<img class="img-responsive" src="img/xssGruard.jpg" alt="SQLI Types">
+								</figure>
+								<p>Bu saldırıyı engellemek için aşağıdaki birkaç önlem alınabilir.</p>
+								<p>1.Arama girdisi, uygun kodlama kontrolünü içerecek şekilde sterilize edilebilir.</p>
+								<p>2.Web sunucusu geçersiz istekleri yönlendirecek şekilde ayarlanabilir.</p>
+								<p>3.Web sunucusu eşzamanlı girişi tespit edebilir ve oturumları sonlandırabilir.</p>
+								<p>4.Web sunucusu iki farklı IP adresinden eşzamanlı girişi tespit edebilir ve oturumları sonlandırabilir.</p>
+								<p>5.Web sitesi daha önce kullanıcıları kredi kartı numarasının sadece birkaç hanesini gösterebilir.</p>
+								<p>6.Web sitesi kullanıcıların kayıt bilgilerini değiştirmeden önce tekrar parolalarını girmelerini gerektirebilir.</p>
+								<p>7.Web sitesi İçerik Güvenlik Politikası’ nın pek çok farklı yönünü kullanabilir.</p>
+								<p>8.Kullanıcılar,”tehlikesiz gözüken” ancak kötücül olan linklere tıklamamaları konusunda eğitilebilir.</p>
+								<p>9.Çerez HttpOnly bayrağı ile işaretlenerek JavaScript’in çereze erişimi engellenebilir.</p>
+								<h2>XSS Zafiyeti Nasıl Bulunur ?</h2>
+								<p>XSS zafiyetini sömürmek için web sitesindeki arama alanları saldırmak için güzel bir alandır. Buraya aşağıdaki gibi basit bir javascript kodu yazıp deneyebiliriz.</p>
+								<figure class="img-responsive-center">
+									<img class="img-responsive" src="img/xsss.png" alt="SQLI Types">
+								</figure>
+								<p>Yukaridaki javascript kodunu çalıştığında web sitesi bir uyarı gösterir ve kodumuzun çalıştığını anlayabiliriz.</p>
+								<p>Bir web sitede elimizle tek tek payload deneyerek XSS zafiyeti aramak zor olabilir. İşimizi biraz kolaylaştırmak için BurpSuite içerisinde web sitesindeki input alanına XSS payloadları ile bir brüte force atağı yapabiliriz.</p>
+								<br>
+								<h2>Kullanılabilecek XSS kodları:</h2>
+								<a href="https://github.com/payloadbox/xss-payload-list">XSS Payload List</a>
+								<br>
+								<br>
+								<br>
+								<br>
+								
+
+
+
+								<p>Okuduğunuz için teşekkürler :)</p>
+							</div>
+						</article>
+					</main>
+					
+				</div>
+			</div>
+		</div>
+		<footer id="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="copyright">&copy; 2022 HSS</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Mobile Menu -->
+		<div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Anasayfa</a></li>
+					<li><a href="full-width.html">Projeler</a></li>
+					<li><a href="about.html">Hakkımda</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<script src="js/script.js"></script>
+
+	</body>
+</html>
