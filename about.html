@@ -74,7 +74,7 @@
 								</figure>
 								<!-- <p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p> -->
 								<!-- <p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p> -->
-								<p> Bartın Üniversitesi Bilgisayar Mühendisliği 3.sınıf öğrencisiyim.2020 yılında Siber Vatan projesine katıldım. Linux, Network ve CEH eğitimleri aldım. Eğitimlere katıldıktan sonra CTF yarışmalarına katılarak ve araştırmalar yaparak kendimi Siber Güvenlik alanında geliştirmeye başladım.</p> 
+								<p> Bartın Üniversitesi Bilgisayar Mühendisliği 4.sınıf öğrencisiyim.2020 yılında Siber Vatan projesine katıldım. Linux, Network ve CEH eğitimleri aldım. Eğitimlere katıldıktan sonra CTF yarışmalarına katılarak ve araştırmalar yaparak kendimi Siber Güvenlik alanında geliştirmeye başladım.</p> 
 								<p> 2 arkadaşım ile beraber Siber Güvenlik ile ilgili Tübitak projemiz üzerinde çalışıyoruz. Şu anda kendimi Web Güvenliği alanında geliştiriyorum. Siber Vatan projesinin altında bulunan Web Güvenliği takımı Yavuzlar ile Web zafiyetleri ile ilgili projeler üzerinde çalışıyoruz.</p>
 								<div class="height-40px"></div>
 								<h2 class="title text-center">Social</h2>
@@ -87,6 +87,8 @@
 									<!-- <li class="google-plus"><a href="#"><span class="ion-social-googleplus"></span></a></li> -->
 									<!-- <li class="tumblr"><a href="#"><span class="ion-social-tumblr"></span></a></li> -->
 								</ul>
+								<br>
+								<p id="demo" class="title text-center" ></p>
 							</div>
 						</article>
 					</main>
@@ -108,15 +110,31 @@
 			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
 			<nav>
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="full-width.html">Blog</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="index.html">Anasayfa</a></li>
+					<li><a href="full-width.html">Projeler</a></li>
+					<li><a href="about.html">Hakkımda</a></li>
+				<!--	<li><a href="contact.html">Contact</a></li> -->
 				</ul>
 			</nav>
 		</div>
 
 		<script src="js/script.js"></script>
+		<script>
+			var countDownDate = new Date("Jun 15, 2023 15:37:25").getTime();
+			var x = setInterval(function() {
+				var now = new Date().getTime();
+				var distance = countDownDate - now;
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+				document.getElementById("demo").innerHTML = days + " Gün " + hours + " Saat " + minutes + " Dakika " + seconds + " Saniye ";
+				if (distance < 0) {
+					clearInterval(x);
+					document.getElementById("demo").innerHTML = "EXPIRED";
+				}
+			}, 1000);
+		</script>
 		
 	</body>
 </html>
