@@ -1,0 +1,87 @@
+baseurl      = "localhost"
+title        = "HSS"
+languageCode = "en-us"
+theme        = "hello-friend-ng"
+paginate     = 10
+
+[params]
+  # dateform        = "Jan 2, 2006"
+  # dateformShort   = "Jan 2"
+  # dateformNum     = "2006-01-02"
+  # dateformNumTime = "2006-01-02 15:04"
+
+  # Subtitle for home
+  homeSubtitle = "a little security a little coding "
+  path = "/img/cvpp.jpg"
+
+  # Yazıları aktifleştirmek için true yap
+  disableReadOtherPosts = true
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = true
+  
+  # Show a global language switcher in the navigation bar
+  enableGlobalLanguageMenu = false
+
+  # Metadata mostly used in document's head
+  description = "My new homepage or blog"
+  keywords = "homepage, blog"
+
+#[params.portrait]
+#    path     = "/public/img/cvpp.jpg"
+#    alt      = "Portrait"
+#    maxWidth = "100px"
+
+
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+
+[[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/hssdev_"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/selimsur"
+  
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/selimsur"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:huseyinselimsurmelihindi@gmail.com"
+
+[languages]
+  [languages.en]
+    title = "Hüseyin Selim Sürmelihindi"
+    subtitle = ""
+    keywords = ""
+    
+
+    [languages.en.params.logo]
+      logoText = "hss"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+    logoCursorDisabled = true
+    
+    
+
+    
+    
+
+  # And you can even create generic menu
+  [menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "posts/"
